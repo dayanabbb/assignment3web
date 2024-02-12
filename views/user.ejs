@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,700;1,500&family=Montserrat:ital,wght@0,200;0,700;1,400&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Weather</title>
+    <style>
+        body {
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            background-color: rgb(11, 12, 23);
+            display: flex;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container h1 {
+            color: snow;
+            font-family: 'Exo', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .container label {
+            color: snow;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        
+
+        container input[type="text"] {
+            width: 300px;
+            height: 35px;
+            border: 2px solid #BAF800;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 15px;
+            padding-left: 15px;
+            color: snow;
+            background: transparent;
+            margin-bottom: 20px;
+        }
+
+        .container button {
+            color: #000;
+            font-family: 'Exo', sans-serif;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            width: 300px;
+            font-weight: 600;
+            font-style: italic;
+            height: 35px;
+            border: none;
+            border-radius: 20px;
+            position: relative;
+            background-color: #BAF800;
+        }
+
+        
+
+        footer {
+            bottom: 0;
+            color: snow;
+            font-size: 16px;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 500;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/weather" method="get" class="text-center">
+            <div class="form-group">
+                <h1>Welcome to Dayana's weather forecast!</h1>
+                <label for="city">Enter the city name:</label>
+                <input type="text" id="city" name="city" required class="form-control">
+            </div>
+            <button type="submit">Get Current Weather</button>
+        </form>
+        <div id="weather-info" class="mt-5"></div>
+        <div id="map-container" style="height: 300px; margin: 20px;"></div>
+    </div>
+    <footer class="text-center mt-5 py-3 bg-dark fixed-bottom">
+        <p class="text-white">Dayana Belyalova | SE-2201</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

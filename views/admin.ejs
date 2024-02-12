@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <style>
+      
+        body {
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            background-color: rgb(11, 12, 23);
+            display: flex;
+        }
+        .admin_contianer {
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .admin_contianer h1 {
+            color: snow;
+            font-family: 'Exo', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .admin_contianer label {
+            color: snow;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .admin_contianer input {
+            width: 300px;
+            height: 35px;
+            border: 2px solid #BAF800;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 15px;
+            padding-left: 15px;
+            color: snow;
+            background: transparent;
+            margin-bottom: 20px;
+        }
+        .admin_contianer button {
+            color: #000;
+            font-family: 'Exo', sans-serif;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            width: 300px;
+            font-weight: 600;
+            font-style: italic;
+            height: 35px;
+            border: none;
+            border-radius: 20px;
+            position: relative;
+            background-color: #BAF800;
+        }
+        footer {
+            bottom: 0;
+            color: snow;
+            font-size: 16px;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 500;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="admin_contianer">
+      <h1>Welcome to the Admin Page</h1>
+    <form action="/admin" method="post">
+      <label for="email">Email to Delete:</label>
+      <input type="email" id="email" name="email" required />
+      <button type="submit">Delete User</button>
+    </form>
+    </div>
+    <footer class="text-center mt-5 py-3 bg-dark fixed-bottom">
+      <p class="text-white">Dayana Belyalova | SE-2201</p>
+  </footer>
+  </body>
+</html>
